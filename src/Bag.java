@@ -30,12 +30,17 @@ public class Bag {
             return null;
         }
         int index = (int)Math.round(Math.random()*(size-1));
-        Object item = items[index];
-        for (int i = index; i < size-1; i++) {
-            items[i] = items[i+1];
+        if (items[index] != " ") {
+            Object item = items[index];
+//        for (int i = index; i < size-1; i++) {
+//            items[i] = items[i+1];
+//        }
+            items[index] = " ";
+//            items[--size] = null;
+            return item;
         }
-        items[--size] = null;
-        return item;
+        return remove();
+
     }
 
     public Object get() {
