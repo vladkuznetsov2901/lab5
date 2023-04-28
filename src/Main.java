@@ -7,6 +7,7 @@ public class Main {
 
 
         Pair<Integer, String> pair1 = new Pair<>(0, "ervwevwe");
+        Pair<Integer, String> pair2 = new Pair<>(1, "dgbsrb");
 
         pair1.printPair();
 
@@ -24,6 +25,8 @@ public class Main {
         PairBag pairBag1 = new PairBag(10);
 
         pairBag1.add(pair1);
+
+        pairBag1.add(pair2);
 
         pairBag1.size();
 

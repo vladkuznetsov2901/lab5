@@ -10,7 +10,7 @@ public class PairBag {
     }
 
 
-    public void add(Object item) {
+    public void add(Pair<?, ?> item) {
         // добавление элемента в случайную позицию
         int index = (int)Math.round(Math.random()*(maxSize));
         if (index == maxSize) {
@@ -31,7 +31,7 @@ public class PairBag {
             return null;
         }
         int index = (int)Math.round(Math.random()*(maxSize - 1));
-        Object item = items[index];
+        Pair<?, ?> item = (Pair<?, ?>) items[index];
         for (int i = index; i < maxSize-1; i++) {
             items[i] = items[i+1];
         }
@@ -46,7 +46,8 @@ public class PairBag {
 
     public void printPairBag(){
         for (int i = 0; i < maxSize; i++){
-            System.out.println(items[i]);
+            Pair<?, ?> item = (Pair<?, ?>) items[i];
+            System.out.println("First: " + item.getFirst() + " Second: " + item.getSecond());
         }
 
     }

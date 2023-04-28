@@ -71,6 +71,13 @@ public class GPairBag<T> extends PairBag {
             pairs.add((Pair<T, T>) current.pair);
             current = current.next;
         }
+
+        for (int i = 0; i < pairs.size(); ++i){
+            Pair<?, ?> pair = pairs.get(i);
+            System.out.println("First: " + pair.getFirst() + " Second: " + pair.getSecond());
+        }
+
+
         return pairs;
     }
 }
