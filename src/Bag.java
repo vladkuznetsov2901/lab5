@@ -36,6 +36,7 @@ public class Bag {
 //            items[i] = items[i+1];
 //        }
             items[index] = " ";
+            --size;
 //            items[--size] = null;
             return item;
         }
