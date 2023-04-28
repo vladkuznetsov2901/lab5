@@ -100,22 +100,4 @@ class StringHashFunction implements HashFunction<String> {
     }
 }
 
-class Main2 {
-    public static void main(String[] args) {
-        HashFunction<String> hashFunction = new StringHashFunction(10);
-        HashTable<String, Person> hashTable = new HashTable<String, Person>(10, hashFunction);
-        Person p1 = new Person("1", "John Doe", 25);
-        Person p2 = new Person("2", "Jane Smith", 30);
-        Person p3 = new Person("3", "Bob Johnson", 40);
-        hashTable.insert(p1);
-        hashTable.insert(p2);
-        hashTable.insert(p3);
-        Person p = hashTable.search("3");
-        if (p != null) {
-            System.out.println("Found person: " + p.getName());
-        } else {
-            System.out.println("Person not found.");
-        }
-        hashTable.delete("1");
-    }
-}
+
