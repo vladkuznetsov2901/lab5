@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Task6 {
 
     public static void search_team(int n, Bag bag) {
-        System.out.println("Итерация ");
         Scanner in = new Scanner(System.in);
         if (n <= 1){
             System.out.println(bag.remove());
